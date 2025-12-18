@@ -205,3 +205,59 @@ body{
     .mvv{ grid-template-columns: 1fr; }
     .mvv-card{ min-height: auto; }
 }
+
+/* Botão Entrar no menu */
+.btn-entrar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(180deg, #0f55b2 0%, #074390 100%);
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 0;
+    box-shadow: 0 6px 18px rgba(4,28,56,0.22);
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+    font-family: tec2;
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* Ícone dentro do botão */
+.btn-entrar .icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    opacity: 0.98;
+    flex-shrink: 0;
+}
+
+/* Texto do botão mantém bom contraste */
+.btn-entrar .btn-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Hover / Active / Focus */
+.btn-entrar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(4,28,56,0.28);
+}
+
+.btn-entrar:active {
+    transform: translateY(0);
+}
+
+.btn-entrar:focus-visible {
+    outline: 3px solid rgba(255,255,255,0.14);
+    outline-offset: 3px;
+}
+
+/* Ajuste para menu em telas pequenas */
+@media (max-width: 480px) {
+    .navlinks { gap: 12px; }
+    .btn-entrar { padding: 7px 10px; font-size: 14px; }
+    .btn-entrar .icon { width: 16px; height: 16px; }
+}
