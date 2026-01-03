@@ -694,115 +694,191 @@ footer {
     font-family: "Sour Gummy", "tec2", sans-serif;
 }
 
-/* MVV (Missão, Visão e Valores) */
-.mvv-section{
-    padding: 56px 0 80px;
+/* =========================================
+   MVV (Missão, Visão e Valores) - DESIGN FINAL
+   ========================================= */
+
+/* Espaçamento da seção */
+.mvv-section {
+    padding: 60px 0 90px;
     background: transparent;
 }
-.section-title{
-    margin: 0 auto 18px;
+
+/* Título Geral da Seção (Centralizado) */
+.section-title {
+    margin: 0 auto 40px;
     text-align: center;
-    font-size: 30px;
-    color: var(--muted);
+    font-size: 36px;
+    color: #082f5b; /* Azul escuro */
     font-family: "Sour Gummy", "tec2", sans-serif;
 }
-.mvv-grid{
+
+/* Grid layout (3 colunas) */
+.mvv-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 24px;
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
 }
-.mvv-card{
-    background: var(--bg);
-    padding: 22px;
+
+/* O CARD (Estilo Exato da Imagem) */
+.mvv-card {
+    background: #ffffff;
+    padding: 32px;
     border-radius: 12px;
-    box-shadow: 0 14px 40px rgba(4,28,56,0.06);
+    box-shadow: 0 10px 30px rgba(4, 28, 56, 0.08); /* Sombra suave */
+    
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start; /* Alinha tudo à esquerda */
+    text-align: left;
+    
+    /* A BORDA LATERAL LARANJA */
+    border-left: 6px solid #ff9800; 
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito Hover (Levanta o card) */
+.mvv-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(4, 28, 56, 0.15);
+}
+
+/* Títulos dos Cards (Missão, Visão, Valores) */
+.mvv-card h4 {
+    margin: 0;
+    font-size: 28px;
+    color: #0f55b2; /* Azul da marca */
+    font-family: "Sour Gummy", "tec2", sans-serif;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 8px; /* Espaço para o traço */
+}
+
+/* O TRAÇO LARANJA EMBAIXO DO TÍTULO */
+.mvv-card h4::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 10px;
+    margin-top: 14px;
+    background: linear-gradient(90deg, var(--accent), var(--primary));
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(15,85,178,0.08);
+    opacity: 0.98;
+}
+
+/* Texto descritivo */
+.mvv-card p,
+.mvv-card .valores-list li {
+    margin: 0;
+    color: rgba(4, 28, 56, 0.9);
+    line-height: 1.6;
+    font-size: 16px;
+    font-family: "Comic Relief", system-ui, sans-serif;
+    font-weight: 400;
+}
+
+/* Lista de Valores */
+.valores-list {
+    list-style: disc; /* Bolinhas da lista */
+    padding-left: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: flex-start;
+}
+
+/* Responsividade (Celular e Tablet) */
+@media (max-width: 900px) {
+    .mvv-grid {
+        grid-template-columns: 1fr; /* Vira 1 coluna */
+        max-width: 500px;
+    }
+    
+    .mvv-card {
+        padding: 24px;
+    }
+}
+
+/* Seção Objetivos */
+.objetivos-section{
+    padding: 56px 0 80px;
+    background: transparent;
+}
+.objetivos-grid{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: space-between;
+}
+.objetivos-card{
+    /* mantém identidade visual do .quem-card */
+    flex: 1 1 58%;
+    background: var(--bg);
+    padding: 36px; /* igual ao .quem-card */
+    border-radius: 14px;
+    box-shadow: 0 14px 44px rgba(4,28,56,0.06); /* mesma sombra */
+    border-left: 6px solid var(--accent); /* destaque laranja */
+    color: rgba(4,28,56,0.95);
+    font-size: 18px;
+    line-height: 1.7;
     transition: transform .18s ease, box-shadow .18s ease;
-    border-left: 6px solid rgba(0,0,0,0.04);
+    animation: fadeInUp .6s ease both;
 }
-.mvv-card:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 20px 60px rgba(4,28,56,0.10);
+
+/* mantém espaçamento/text-align igual ao card original */
+.objetivos-card p{
+    margin: 0 0 16px;
+    text-align: justify;
 }
-.mvv-icon{
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    display: inline-flex;
+
+/* figura lateral */
+.objetivos-figure{
+    flex: 0 0 360px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
-    font-size: 20px;
-    color: #082f5b;
-    box-shadow: 0 8px 20px rgba(4,28,56,0.06);
-    margin-bottom: 6px;
 }
-/* Cores específicas por card (visual coerente com paleta) */
-.mvv-card:nth-child(1) .mvv-icon{ background: linear-gradient(135deg,#ffd54f,#ff9800); color:#082f5b; }
-.mvv-card:nth-child(2) .mvv-icon{ background: linear-gradient(135deg,#0f55b2,#074390); color:#fff; }
-.mvv-card:nth-child(3) .mvv-icon{ background: linear-gradient(135deg,#ffb74d,#ff9800); color:#082f5b; }
+.objetivos-figure img{
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 18px 48px rgba(4,28,56,0.12);
+    transform: rotate(-2.5deg);
+    object-fit: cover;
+    transition: transform .22s ease, box-shadow .22s ease;
+}
 
-.mvv-card h4{
-    margin: 0;
-    font-size: 25px;
-    color: var(--primary);
-    font-family: "Sour Gummy", "tec2", sans-serif  ;
-    font-weight: 600;
-}
-.mvv-card p, .mvv-card .valores-list{
-    margin: 0;
-    color: rgba(4,28,56,0.9);
-    line-height: 1.6;
-    font-size: 15px;
-    font-family: "Comic Relief", system-ui;
-    font-weight: 400;
-    font-style: normal;
-
-}
-.valores-list{
-    list-style: disc;
-    padding-left: 18px;
-    display: grid;
-    gap: 8px;
+/* efeito hover na imagem (sutil) */
+.objetivos-figure img:hover,
+.objetivos-figure img:focus{
+    transform: rotate(-1deg) scale(1.02);
+    box-shadow: 0 28px 64px rgba(4,28,56,0.14);
+    outline: none;
 }
 
 /* Responsividade */
 @media (max-width: 900px){
-    .mvv-grid{ grid-template-columns: 1fr; }
-    .mvv-section{ padding: 36px 0 60px; }
+    .objetivos-grid{
+        flex-direction: column-reverse;
+        gap: 18px;
+        align-items: center;
+    }
+    .objetivos-figure{ width: 70%; max-width: 420px; }
+    .objetivos-figure img{ max-width: 420px; transform: none; }
+    .objetivos-card{ padding: 28px; font-size: 16px; text-align: center; }
 }
-
 @media (max-width: 720px){
-    .mvv-card{
-        padding: 18px;
-        gap: 8px;
-    }
-    .mvv-icon{
-        width: 56px;
-        height: 56px;
-        font-size: 18px;
-    }
-    .mvv-card h4{
-        font-size: 16px;
-    }
-    .mvv-card p, .mvv-card .valores-list{
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .retangulo {
-        margin-top: 12px;
-        padding: 18px;
-    }
-    .retangulo h2{
-        font-size: 22px;
-    }
+    .objetivos-card{ padding: 18px; text-align: center; }
 }
