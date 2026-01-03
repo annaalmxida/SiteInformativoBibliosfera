@@ -4,8 +4,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 72px;              /* altura consistente para a barra */
-    padding: 0 50px;           /* padding horizontal mantido, vertical centralizado */
+    height: 72px;
+    padding: 0 50px;
     box-sizing: border-box;
     border-bottom: 2px solid #0f55b2;
     box-shadow: 0 2px 10px #074390;
@@ -19,7 +19,7 @@ header {
 body{
     background-color: var(--page-bg);
     padding-top: 82px;
-    padding-bottom: 72px;
+    padding-bottom: 24px;
     box-sizing: border-box;
     font-family: var(--font-body);
     font-weight: 400;
@@ -28,15 +28,19 @@ body{
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.6;
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-
+/* Elementos do Header */
 .dvh {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-
 .logo {
     width: 60px;
     height: auto;
@@ -45,7 +49,7 @@ body{
 
 .tituloh {
     color: #ffffff;
-    font-family: "Sour Gummy", "tec2", sans-serif; /* agora usa a fonte importada */
+    font-family: "Sour Gummy", "tec2", sans-serif; 
     font-size: 24px;
     margin: 0;
 }
@@ -54,8 +58,8 @@ body{
     list-style: none;
     display: flex;
     gap: 25px;
-    height: 100%;              /* ocupa a altura da navbar */
-    align-items: center;       /* centra verticalmente os itens da lista */
+    height: 100%;
+    align-items: center; 
     margin: 0;
     padding: 0;
 }
@@ -70,13 +74,13 @@ body{
     color: #ffffff;
     text-decoration: none;
     font-size: 18px;
-    font-family: inherit; /* herda de .nav para usar Sour Gummy (fallback: tec2, sans-serif) */
+    font-family: inherit; 
     font-weight: bold;
     transition: color 0.3s;
     display: inline-flex;
     align-items: center;
     height: 100%;
-    padding: 0 8px; /* espaçamento horizontal interno sem mexer no gap geral */
+    padding: 0 8px;
 }
 
 .navlinks li a:hover {
@@ -93,7 +97,7 @@ body{
 
 
 footer {
-    position: fixed;
+    position: static;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -101,6 +105,7 @@ footer {
     color: #ffffff;
     text-align: center;
     padding: 15px 0;
+    margin: 0; 
     font-family: tec2;
     box-shadow: 0 -2px 10px #0f55b2;
     z-index: 999; 
@@ -144,7 +149,6 @@ footer {
     line-height: 1.5;
 }
 
-/* Variáveis e estilo do conteúdo principal (home) */
 :root{
     --primary: #0f55b2;
     --primary-dark: #0b4a99;
@@ -164,11 +168,9 @@ footer {
     padding: 48px 20px;
     box-sizing: border-box;
     background: linear-gradient(180deg, rgba(15,85,178,0.03), transparent);
-    position: relative; /* para as decorações */
+    position: relative;
     z-index: 0;
 }
-
-/* decorações coloridas (similar ao .quem-somos) */
 .home-container::before,
 .home-container::after {
     content: "";
@@ -194,7 +196,6 @@ footer {
     background: radial-gradient(circle at 60% 40%, var(--primary), transparent 45%);
 }
 
-/* garante que o conteúdo fique sobre as decorações */
 .home-inner {
     position: relative;
      display: flex;
@@ -205,7 +206,7 @@ footer {
      z-index: 1;
 }
 
-/* destaque laranja no bloco principal para manter coerência visual */
+
 .content{
     width: 100%;
     background: var(--bg);
@@ -219,7 +220,6 @@ footer {
     align-items: flex-start;
 }
 
-/* Wrapper que alinha conteúdo e imagem lado a lado */
 .home-inner{
     display: flex;
     gap: 36px;
@@ -228,21 +228,20 @@ footer {
     width: 100%;
 }
 
-/* força proporção entre bloco de texto e imagem */
+
 .content{
     flex: 1 1 60%;
 }
 
-/* imagem símbolo à direita do conteúdo */
+
 .home-hero{
     flex: 0 0 320px;
     max-width: 35%;
     height: auto;
-    background: var(--page-bg);     /* fundo igual ao background do site */
-    padding: 6px;                   /* espaço entre imagem e borda */
+    background: var(--page-bg);  
+    padding: 6px;
 }
 
-/* Tipografia do conteúdo - hero */
 .content h3{
     margin: 0;
     font-family: var(--font-heading);
@@ -256,7 +255,7 @@ footer {
     margin-bottom: 12px;
 }
 
-/* degrade abaixo do título ajustado a nova tipografia */
+
 .content h3::after{
     content: "";
     display: block;
@@ -314,7 +313,7 @@ p{
     border-radius: 10px;
 }
 
-/* Responsividade: ajusta espaçamentos e centraliza em telas pequenas */
+/* Responsividade*/
 @media (max-width: 720px){
     .content h3{ font-size: 28px; }
     .content h3::after{
@@ -330,8 +329,8 @@ p{
     .home-hero{
         max-width: 320px;
         width: 60%;
-        padding: 4px;                /* menos padding em telas pequenas */
-        border-width: 3px;           /* borda um pouco mais fina no mobile */
+        padding: 4px;          
+        border-width: 3px;          
     }
 }
 
@@ -413,11 +412,10 @@ p{
 }
 
 /* Botão Entrar no menu */
-/* pequenas regras específicas para manter o botão alinhado verticalmente */
 .nav .btn-entrar {
-    align-self: center;        /* garante alinhamento vertical em relação à navbar */
-    height: 44px;              /* altura consistente */
-    padding: 0 16px;           /* padding horizontal; padding vertical zero para centrar via altura */
+    align-self: center;       
+    height: 44px;              
+    padding: 0 16px;           
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -441,14 +439,12 @@ p{
     line-height: 1;
 }
 
-/* garante que o texto interno utilize a fonte herdada e tenha boa exibição */
 .btn-entrar .btn-text{
     display: inline-block;
     vertical-align: middle;
     font-family: inherit;
 }
 
-/* Ícone dentro do botão */
 .btn-entrar .icon {
     width: 18px;
     height: 18px;
@@ -457,13 +453,12 @@ p{
     flex-shrink: 0;
 }
 
-/* Texto do botão mantém bom contraste */
+
 .btn-entrar .btn-text {
     display: inline-block;
     vertical-align: middle;
 }
 
-/* Hover / Active / Focus */
 .btn-entrar:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 24px rgba(4,28,56,0.28);
@@ -529,12 +524,11 @@ p{
     "wdth" 100;
 }
 
-/* smooth scroll (fallback se JS estiver ausente) */
 html {
     scroll-behavior: smooth;
 }
 
-/* QUEM SOMOS - cartão alinhado com o padrão do site */
+/* QUEM SOMOS */
 .quem-somos{
     padding: 56px 0;
     background: transparent;
@@ -564,14 +558,12 @@ html {
     font-family: "Sour Gummy", "tec2", sans-serif;
 }
 
-/* Quem somos: layout em duas colunas com decoração */
 .quem-somos{
     position: relative;
-    padding: 36px 0 80px; /* reduz o espaçamento superior para aproximar do hero */
+    padding: 36px 0 80px; 
     overflow: visible;
 }
 
-/* decoração suave: círculos em azul e laranja */
 .quem-somos::before,
 .quem-somos::after{
     content: "";
@@ -597,20 +589,19 @@ html {
     background: radial-gradient(circle at 60% 40%, var(--primary), transparent 45%);
 }
 
-/* layout interno: texto + imagem */
+
 .quem-inner{
     max-width: 1100px;
-    margin: 10px auto 0; /* margem superior menor: traz o bloco um pouco para cima */
+    margin: 10px auto 0;
     padding: 0 20px;
     box-sizing: border-box;
     display: flex;
     gap: 28px;
     align-items: center;
     justify-content: space-between;
-    z-index: 1; /* sobre a decoração */
+    z-index: 1;
 }
 
-/* cartão de texto */
 .quem-card{
     flex: 1 1 58%;
     background: var(--bg);
@@ -621,10 +612,10 @@ html {
     font-size: 18px;
     line-height: 1.7;
     position: relative;
-    border-left: 6px solid var(--accent); /* destaque laranja */
+    border-left: 6px solid var(--accent);
 }
 
-/* destaque no título */
+
 .quem-card h3{
     margin: 0 0 12px;
     font-size: 28px;
@@ -641,7 +632,6 @@ html {
     margin-top: 10px;
 }
 
-/* figura lateral (imagem do livro) */
 .quem-figure{
     flex: 0 0 360px;
     display: flex;
@@ -659,13 +649,12 @@ html {
     display: block;
 }
 
-/* comportamento responsivo: empilha e reduz decoração */
 @media (max-width: 900px){
     .quem-inner{
         flex-direction: column-reverse;
         gap: 18px;
         align-items: center;
-        margin-top: 6px; /* menor espaçamento no mobile */
+        margin-top: 6px; 
     }
     .quem-figure{ width: 70%; max-width: 420px; }
     .quem-card{ width: 100%; padding: 28px; border-left-width: 5px; }
@@ -694,26 +683,21 @@ footer {
     font-family: "Sour Gummy", "tec2", sans-serif;
 }
 
-/* =========================================
-   MVV (Missão, Visão e Valores) - DESIGN FINAL
-   ========================================= */
+/* Seção MVV (Missão, Visão e Valores) */
 
-/* Espaçamento da seção */
 .mvv-section {
     padding: 60px 0 90px;
     background: transparent;
 }
 
-/* Título Geral da Seção (Centralizado) */
 .section-title {
     margin: 0 auto 40px;
     text-align: center;
     font-size: 36px;
-    color: #082f5b; /* Azul escuro */
+    color: #082f5b;
     font-family: "Sour Gummy", "tec2", sans-serif;
 }
 
-/* Grid layout (3 colunas) */
 .mvv-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -724,17 +708,16 @@ footer {
     box-sizing: border-box;
 }
 
-/* O CARD (Estilo Exato da Imagem) */
 .mvv-card {
     background: #ffffff;
     padding: 32px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(4, 28, 56, 0.08); /* Sombra suave */
+    box-shadow: 0 10px 30px rgba(4, 28, 56, 0.08); 
     
     display: flex;
     flex-direction: column;
     gap: 16px;
-    align-items: flex-start; /* Alinha tudo à esquerda */
+    align-items: flex-start; 
     text-align: left;
     
     /* A BORDA LATERAL LARANJA */
@@ -743,7 +726,7 @@ footer {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efeito Hover (Levanta o card) */
+
 .mvv-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 50px rgba(4, 28, 56, 0.15);
@@ -753,14 +736,14 @@ footer {
 .mvv-card h4 {
     margin: 0;
     font-size: 28px;
-    color: #0f55b2; /* Azul da marca */
+    color: #0f55b2;
     font-family: "Sour Gummy", "tec2", sans-serif;
     font-weight: 700;
     position: relative;
-    padding-bottom: 8px; /* Espaço para o traço */
+    padding-bottom: 8px;
 }
 
-/* O TRAÇO LARANJA EMBAIXO DO TÍTULO */
+/* O DEGRADÊ EMBAIXO DO TÍTULO */
 .mvv-card h4::after {
     content: "";
     display: block;
@@ -773,7 +756,6 @@ footer {
     opacity: 0.98;
 }
 
-/* Texto descritivo */
 .mvv-card p,
 .mvv-card .valores-list li {
     margin: 0;
@@ -822,13 +804,12 @@ footer {
     justify-content: space-between;
 }
 .objetivos-card{
-    /* mantém identidade visual do .quem-card */
     flex: 1 1 58%;
     background: var(--bg);
-    padding: 36px; /* igual ao .quem-card */
+    padding: 36px;
     border-radius: 14px;
-    box-shadow: 0 14px 44px rgba(4,28,56,0.06); /* mesma sombra */
-    border-left: 6px solid var(--accent); /* destaque laranja */
+    box-shadow: 0 14px 44px rgba(4,28,56,0.06);
+    border-left: 6px solid var(--accent);
     color: rgba(4,28,56,0.95);
     font-size: 18px;
     line-height: 1.7;
@@ -836,13 +817,11 @@ footer {
     animation: fadeInUp .6s ease both;
 }
 
-/* mantém espaçamento/text-align igual ao card original */
 .objetivos-card p{
     margin: 0 0 16px;
     text-align: justify;
 }
 
-/* figura lateral */
 .objetivos-figure{
     flex: 0 0 360px;
     display: flex;
@@ -860,7 +839,6 @@ footer {
     transition: transform .22s ease, box-shadow .22s ease;
 }
 
-/* efeito hover na imagem (sutil) */
 .objetivos-figure img:hover,
 .objetivos-figure img:focus{
     transform: rotate(-1deg) scale(1.02);
@@ -883,7 +861,6 @@ footer {
     .objetivos-card{ padding: 18px; text-align: center; }
 }
 
-/* Lista escaneável dentro do card de Funcionamento */
 .func-list{
     list-style: none;
     margin: 18px 0 0;
@@ -899,7 +876,6 @@ footer {
     font-size: 16px;
     line-height: 1.5;
 }
-/* ícones sutis */
 .func-icon{
     display: inline-flex;
     width: 28px;
@@ -914,7 +890,6 @@ footer {
     opacity: 0.98;
 }
 
-/* figura específica (pode reutilizar estilos de objetivos) */
 .funcionamento-figure{
     flex: 0 0 360px;
     display: flex;
@@ -932,7 +907,6 @@ footer {
     transition: transform .22s ease, box-shadow .22s ease;
 }
 
-/* hover sutil como nos outros blocos */
 .funcionamento-figure img:hover,
 .funcionamento-figure img:focus{
     transform: rotate(-1deg) scale(1.02);
@@ -940,9 +914,9 @@ footer {
     outline: none;
 }
 
-/* responsividade: empilha e centraliza como demais seções */
+/* responsividade*/
 @media (max-width: 900px){
-    .objetivos-grid{ /* usado também para funcionamento */
+    .objetivos-grid{ 
         flex-direction: column-reverse;
         gap: 18px;
         align-items: center;
@@ -950,4 +924,105 @@ footer {
     .funcionamento-figure{ width: 70%; max-width: 420px; }
     .funcionamento-figure img{ max-width: 420px; transform: none; }
     .funcionamento-card{ padding: 28px; font-size: 16px; text-align: center; }
+}
+
+/* Seção Contato */
+.contato-section{
+    padding: 56px 0 80px;
+    background: transparent;
+}
+
+.contato-section .objetivos-grid{
+    justify-content: center;
+    align-items: center;
+}
+
+.contato-card{
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.contato-meta{
+    margin-top: 12px;
+}
+.contato-meta a{
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+.contato-form{
+    margin-top: 16px;
+    display: grid;
+    gap: 12px;
+}
+.contato-form label{
+    font-size: 14px;
+    color: rgba(4,28,56,0.85);
+}
+.contato-form input,
+.contato-form textarea{
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(4,28,56,0.08);
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: rgba(4,28,56,0.95);
+    background: #fff;
+    box-sizing: border-box;
+}
+.contato-form input:focus,
+.contato-form textarea:focus{
+    outline: 3px solid rgba(15,85,178,0.08);
+    box-shadow: 0 6px 24px rgba(15,85,178,0.06);
+}
+
+.contato-actions{
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.contato-actions .btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 220px;
+    height: 52px;
+    padding: 12px 22px;
+    border-radius: 12px;
+
+    border: 2px solid #ffffff;
+    background: #0f55b2;
+    color: #fff;
+
+    font-family: "Sour Gummy", "tec2", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: .2px;
+    text-decoration: none;
+
+    box-shadow: 0 10px 30px rgba(15,85,178,0.12);
+    transition: transform .16s ease, box-shadow .16s ease, filter .12s ease;
+}
+
+
+.contato-actions .btn .btn-icon{
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    fill: #fff;
+    opacity: 0.95;
+}
+
+
+/* mobile: botão ocupa toda a largura disponível */
+@media (max-width: 480px){
+    .contato-actions{ width: 100%; padding: 0 12px; }
+    .contato-actions .btn{ width: 100%; min-width: 0; }
 }
