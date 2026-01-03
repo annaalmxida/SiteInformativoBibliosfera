@@ -9,6 +9,8 @@
     <!-- Fontes(Google Fonts) -->
     <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Fonte legível para o corpo -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -20,8 +22,8 @@
 
         <nav class="nav">
             <ul class="navlinks">
-                <li><a href="quemsomos.html">Quem Somos</a></li>
-                <li><a href="Problemática.html">Problemática</a></li>
+                <li><a href="#quem-somos">Quem Somos</a></li>
+                <li><a href="#mvv">MVV</a></li>
                 <li><a href="Produto.html">Produto</a></li>
                 <li><a href="PesquisadeCampo.html">Pesquisa de Campo</a></li>
                 <li class="nav-login">
@@ -42,18 +44,65 @@
       </header>
 
 
-      <div class="home-container">
+      <div class="home-container" id="home-container">
             <section id="home" aria-label="Início da página">
                 <div class="home-inner">
                     <div class="content">
                         <h3>ONDE HISTÓRIAS CRIAM CONEXÕES</h3>
                         <p>Um espaço dedicado à leitura, à troca de ideias e à construção coletiva do conhecimento por meio dos livros.</p>
-                        <a href="#" class="btn" role="button" aria-label="Entrar na Bibliosfera">Entrar na Bibliosfera</a>
+                        <a href="#quem-somos" class="btn" role="button" aria-label="Entrar na Bibliosfera" data-scroll>Entrar na Bibliosfera</a>
                     </div>
                     <img src="img/simbolo.png" alt="Símbolo da Bibliosfera" class="home-hero" loading="lazy">
                 </div>
             </section>
         </div>
+
+
+<div id="quem-somos" class="quem-somos" role="region" aria-label="Quem somos">
+    <div class="quem-inner container">
+        <figure class="quem-figure" aria-hidden="true">
+            <img src="img/livros.png" alt="Livros empilhados e ambiente de leitura" loading="lazy">
+        </figure>
+        <div class="quem-card">
+            <h3>QUEM SOMOS</h3>
+            <p>
+                A Bibliosfera é um clube digital que surgiu da paixão por boas histórias e da vontade de compartilhar experiências literárias com outras pessoas. Acreditamos que a leitura tem o poder de conectar, transformar e ampliar horizontes, e é exatamente isso que buscamos com nossas mídias digitais. Aqui, a leitura é coletiva. Por meio do nosso site, promovemos discussões, clubes temáticos e análises de livros em formato de vídeos, tornando a leitura acessível a todos.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- MISSÃO, VISÃO E VALORES -->
+<section id="mvv" class="mvv-section" role="region" aria-label="Missão, Visão e Valores">
+	<div class="container">
+		<h3 class="section-title">Missão, Visão e Valores</h3>
+		<div class="mvv-grid" role="list" aria-label="Missão Visão Valores">
+			<article class="mvv-card" role="listitem" aria-labelledby="mvv-missao">
+				<div class="mvv-icon" aria-hidden="true">M</div>
+				<h4 id="mvv-missao">Missão</h4>
+				<p>Acreditamos que a leitura não deve ser um privilégio, mas um direito. Por isso, promovemos o acesso a obras literárias de qualidade, de forma acessível, acolhedora e inclusiva. Mais do que entregar livros, queremos aproximar pessoas, provocar reflexões e construir uma comunidade conectada.</p>
+			</article>
+
+			<article class="mvv-card" role="listitem" aria-labelledby="mvv-visao">
+				<div class="mvv-icon" aria-hidden="true">V</div>
+				<h4 id="mvv-visao">Visão</h4>
+				<p>Queremos ser referência em experiências literárias coletivas, ultrapassando barreiras geográficas, culturais e sociais. Sonhamos com uma América Latina mais leitora, mais crítica, mais empática - e trabalhamos diariamente para transformar esse sonho em realidade, um livro por vez.</p>
+			</article>
+
+			<article class="mvv-card" role="listitem" aria-labelledby="mvv-valores">
+				<div class="mvv-icon" aria-hidden="true">V</div>
+				<h4 id="mvv-valores">Valores</h4>
+				<ul class="valores-list">
+					<li>Acreditamos na leitura como fonte de conhecimento e liberdade.</li>
+					<li>Valorizamos cada voz da comunidade e o sentimento de pertencimento.</li>
+					<li>Defendemos o respeito e à diversidade, presente a inclusão e representatividade.</li>
+					<li>Cultivamos ética, empatia e colaboração em todas as nossas relações, dentro e fora da organização.</li>
+
+				</ul>
+			</article>
+		</div>
+	</div>
+</section>
 
 <footer>
   © 2025 - Todos os direitos reservados
