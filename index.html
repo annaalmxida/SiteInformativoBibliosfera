@@ -3,41 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bibliosfera Informátivo</title>
-    <link rel="stylesheet"  href="index.css">
-     <script src="script.js"></script>
+    <title>Bibliosfera Informativo</title>
+    <link rel="stylesheet"  href="style.css">
+    <script src="script.js"></script>
+    <!-- Fontes(Google Fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
       <header>
         <div class="dvh">
-            <img src="logo.png" alt="Logo" class="logo" />
+            <img src="img/logo.png" alt="Logo" class="logo" />
             <h1 class="tituloh">Bibliosfera</h1>
         </div>
 
-        <nav>
+        <nav class="nav">
             <ul class="navlinks">
                 <li><a href="quemsomos.html">Quem Somos</a></li>
                 <li><a href="Problemática.html">Problemática</a></li>
                 <li><a href="Produto.html">Produto</a></li>
                 <li><a href="PesquisadeCampo.html">Pesquisa de Campo</a></li>
-                <li>
-                    <button class="btn-entrar" id="btnEntrar" aria-haspopup="dialog" aria-controls="loginModal" aria-label="Entrar">
-                        <!-- ícone usuário -->
-                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                            <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-4.418 0-8 2.239-8 5v1h16v-1c0-2.761-3.582-5-8-5z"/>
-                        </svg>
+                <li class="nav-login">
+                    <button
+                        class="btn-entrar"
+                        id="btnEntrar"
+                        type="button"
+                        title="Entrar"
+                        aria-haspopup="dialog"
+                        aria-controls="loginModal"
+                        aria-label="Entrar">
+                        <img src="https://img.icons8.com/ios-filled/50/ff9800/login-rounded-right.png" alt="Entrar">
                         <span class="btn-text">Entrar</span>
                     </button>
                 </li>
             </ul>
         </nav>
-        </div>
       </header>
 
 
-      <div class="iniciocentral">
-        <img src="simbolo.png" alt="Bibliosfera">
+      <div class="home-container">
+            <section id="home" aria-label="Início da página">
+                <div class="home-inner">
+                    <div class="content">
+                        <h3>ONDE HISTÓRIAS CRIAM CONEXÕES</h3>
+                        <p>Um espaço dedicado à leitura, à troca de ideias e à construção coletiva do conhecimento por meio dos livros.</p>
+                        <a href="#" class="btn" role="button" aria-label="Entrar na Bibliosfera">Entrar na Bibliosfera</a>
+                    </div>
+                    <img src="img/simbolo.png" alt="Símbolo da Bibliosfera" class="home-hero" loading="lazy">
+                </div>
+            </section>
+        </div>
 
 <footer>
   © 2025 - Todos os direitos reservados
