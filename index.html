@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bibliosfera Informativo</title>
+    <title>Bibliosfera</title>
     <link rel="stylesheet"  href="style.css">
+  <link rel="shortcut icon" href="img/logo.png">
     <script src="script.js"></script>
     <!-- Fontes(Google Fonts) -->
     <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Fonte legível para o corpo -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
       <header>
         <div class="dvh">
-            <img src="img/logo.png" alt="Logo" class="logo" />
-            <h1 class="tituloh">Bibliosfera</h1>
+            <a href="#home" class="topo" title="Ir para o início" aria-label="Ir para o início da página">
+                <img src="img/logo.png" alt="Logo da Bibliosfera" class="logo" />
+                <h1 class="tituloh">Bibliosfera</h1>
+            </a>
         </div>
 
         <nav class="nav">
@@ -113,7 +115,7 @@
       </article>
 
       <figure class="objetivos-figure" aria-hidden="false">
-        <img src="img/Clube-de-Leitura.jpg" alt="Pessoas reunidas em um clube de leitura" loading="lazy">
+        <img src="img/objetivo.png" alt="Símbolo Alvo" loading="lazy">
       </figure>
     </div>
   </div>
@@ -194,7 +196,10 @@
   </div>
 </section>
 <footer>
-  © 2025 - Todos os direitos reservados
+  <div class="footer-inner">
+    <span>© 2025 - Todos os direitos reservados</span>
+    <a href="#home" class="btn voltar-topo" title="Voltar ao topo" aria-label="Voltar ao topo">Voltar ao topo</a>
+  </div>
 </footer>
 </body>
 </html>
