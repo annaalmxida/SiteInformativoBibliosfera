@@ -1110,3 +1110,102 @@ footer {
         justify-content: center;
     }
 }
+
+/* MURAL DE DEPOIMENTOS */
+.mural-section {
+    padding: 56px 0 80px;
+    background: transparent;
+}
+
+.mural-section .section-title {
+    margin: 0 auto 28px;
+    text-align: center;
+    font-size: 32px;
+    color: #082f5b;
+    font-family: "Sour Gummy", "tec2", sans-serif;
+}
+
+.mural-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.testimonial-card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 14px 40px rgba(4,28,56,0.06);
+    border-left: 6px solid var(--accent);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+.testimonial-card:hover { transform: translateY(-6px); box-shadow: 0 24px 60px rgba(4,28,56,0.12); }
+.testimonial-card:focus { outline: 3px solid rgba(15,85,178,0.08); outline-offset: 3px; }
+
+.testimonial-body {
+    margin: 0;
+    color: rgba(4,28,56,0.9);
+    line-height: 1.6;
+    font-size: 15px;
+    max-height: 170px;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+
+.testimonial-body::-webkit-scrollbar { width: 8px; }
+.testimonial-body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary), var(--accent));
+    border-radius: 999px;
+    opacity: 0.95;
+}
+.testimonial-body { -webkit-overflow-scrolling: touch; }
+
+.testimonial-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 6px;
+}
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--primary);
+    flex-shrink: 0;
+    background: #f3f7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.meta-text strong {
+    color: var(--primary);
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 16px;
+}
+.meta-sub {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+/* Responsividade mural */
+@media (max-width: 900px) {
+    .mural-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+    .mural-grid { grid-template-columns: 1fr; }
+    .testimonial-body { max-height: 140px; }
+}
