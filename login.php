@@ -19,18 +19,19 @@
     <h1>Bibliosfera</h1>
     <p>Acesse sua conta e participe da leitura coletiva</p>
 
-    <form onsubmit="loginSimulado(event)">
+    <form action="login_user.php" method="post">
       <label for="email">E-mail</label>
-      <input id="email" type="email" placeholder="seu@email.com" required>
+      <input name="email" id="email" type="email" placeholder="seu@email.com" required>
 
       <label for="senha">Senha</label>
-      <input id="senha" type="password" placeholder="Sua senha" required>
+      <input name="senha" id="senha" type="password" placeholder="Sua senha" required>
 
       <button type="submit">Entrar</button>
     </form>
 
+
     <div class="login-links">
-      <p>Não tem conta? <a href="#">Criar conta</a></p>
+      <p>Não tem conta? <a href="cadastro.php">Criar conta</a></p>
       <a href="index.html" class="voltar">← Voltar ao site</a>
     </div>
   </main>
