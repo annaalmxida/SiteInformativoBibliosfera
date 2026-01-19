@@ -26,5 +26,5 @@ $stmt->bindParam(':senha', $senha);
 
 $stmt->execute();
 
-header('Location: login.html');
+header('Location: login.php');
 exit;

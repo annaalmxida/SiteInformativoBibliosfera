@@ -37,7 +37,7 @@
 
 
     <div class="login-links">
-      <a href="login.html" class="voltar">← Voltar ao login</a>
+      <a href="login.php" class="voltar">← Voltar ao login</a>
     </div>
   </main>
 </body>
