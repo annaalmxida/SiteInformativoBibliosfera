@@ -1,3 +1,28 @@
+:root {
+    --fonte-principal: 'Inter', sans-serif;
+    --fonte-titulo: 'Sour Gummy', cursive;
+}
+
+
+header,
+nav,
+.navlinks,
+.navlinks a,
+.navlinks li,
+.nav-login {
+    font-family: var(--fonte-titulo);
+}
+
+
+.nav, h1 {
+  font-family: "Sour Gummy", "tec2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
 header {
     width: 100%;
     background-color: #0f55b2;
@@ -86,3 +111,139 @@ body{
 .navlinks li a:hover {
     color: #0096D6;
 }
+
+.topo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.nav-login {
+    margin-left: 15px;
+}
+
+.btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-body);
+    font-weight: 600;
+     gap: 10px;
+     padding: 12px 18px;
+     background: var(--primary);
+     color: #fff;
+     border-radius: 10px;
+     text-decoration: none;
+     box-shadow: 0 8px 20px rgba(15,85,178,0.12);
+     transition: transform .16s ease, box-shadow .16s ease, background .16s;
+     -webkit-tap-highlight-color: transparent;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    background: var(--primary-dark);
+    box-shadow: 0 12px 30px rgba(15,85,178,0.18);
+}
+
+.btn:active{
+    transform: translateY(-1px);
+}
+
+.btn:focus-visible{
+    outline: 3px solid rgba(15,85,178,0.18);
+    outline-offset: 4px;
+    border-radius: 10px;
+}
+
+.nav .btn-entrar {
+    align-self: center;       
+    height: 44px;              
+    padding: 0 16px;           
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-entrar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(180deg, #0f55b2 0%, #074390 100%);
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 0;
+    box-shadow: 0 6px 18px rgba(4,28,56,0.22);
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+    font-family: inherit; /* herda a fonte definida em .nav (Sour Gummy) */
+    font-size: 16px;
+    line-height: 1;
+}
+
+.btn-entrar .btn-text{
+    display: inline-block;
+    vertical-align: middle;
+    font-family: inherit;
+}
+
+.btn-entrar .icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    opacity: 0.98;
+    flex-shrink: 0;
+}
+
+
+.btn-entrar .btn-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn-entrar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(4,28,56,0.28);
+}
+
+.btn-entrar:active {
+    transform: translateY(0);
+}
+
+.btn-entrar:focus-visible {
+    outline: 3px solid rgba(255,255,255,0.14);
+    outline-offset: 3px;
+}
+
+.btn-entrar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 18px;
+    border-radius: 25px;
+
+    background: transparent;
+    color: #ffffff;
+
+    font-weight: 600;
+    font-size: 15px;
+
+    border: 2px solid #ff9800;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.btn-entrar img {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-entrar:hover {
+    background: #ff9800;
+    color: #0d47a1;
+}
+
