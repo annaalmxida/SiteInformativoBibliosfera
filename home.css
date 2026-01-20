@@ -330,19 +330,55 @@ a {
     border-radius: 999px;
     font-weight: 600;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0f55b2, #1b76e3);
+    color: #fff;
+    font-family: var(--fonte-titulo);
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+    box-shadow: 0 8px 18px rgba(15,85,178,0.25);
 }
 
 .btn-primary:hover {
-    background-color: #074390;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(15,85,178,0.35);
+    background: linear-gradient(135deg, #074390, #0f55b2);
 }
 
 .btn-secondary {
+    outline: none;
     border: 2px solid #0f55b2;
     color: #0f55b2;
     padding: 10px 26px;
     border-radius: 999px;
     font-weight: 600;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f55b2;
+    font-family: var(--fonte-titulo);
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+    box-shadow: 0 8px 18px rgba(15,85,178,0.25);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(15,85,178,0.35);
+    
 }
 
 .card .tag {
@@ -403,7 +439,6 @@ p {
 .card a {
     margin-top: auto;
     font-weight: 600;
-    color: #0096d6;
     font-family: var(--fonte-titulo);
     font-weight: 600;
 }
