@@ -4,6 +4,11 @@
     --fonte-corpo: 'Comic Relief', cursive;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 
 header,
 nav,
