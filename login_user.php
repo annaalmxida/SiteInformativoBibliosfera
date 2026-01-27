@@ -21,9 +21,11 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
 // Verificar se existe usuário e se a senha bate
 if (!$user || $senha !== $user['senha']) {
-    echo "E-mail ou senha inválidos";
+    $_SESSION['erro_login'] = "E-mail ou senha inválidos";
+    header('Location: login.php');
     exit;
 }
+
 
 $_SESSION['id_user'] = $user['id_user'];
 $_SESSION['usuario'] = $user['usuario'];

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -18,6 +21,14 @@
   <main class="login-container" role="main">
     <h1>Bibliosfera</h1>
     <p>Acesse sua conta e participe da leitura coletiva</p>
+
+    <?php
+      if (isset($_SESSION['erro_login'])) {
+      echo '<p class="erro-login">' . $_SESSION['erro_login'] . '</p>';
+      unset($_SESSION['erro_login']); // apaga depois de mostrar
+      }
+    ?>
+
 
     <form action="login_user.php" method="post">
       <label for="email">E-mail</label>

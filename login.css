@@ -125,3 +125,14 @@
   color: #666;
   font-size: 0.85rem;
 }
+
+.erro-login {
+    color: #e53935;
+    background: rgba(229, 57, 53, 0.08);
+    border: 1px solid rgba(229, 57, 53, 0.3);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-align: center;
+}
