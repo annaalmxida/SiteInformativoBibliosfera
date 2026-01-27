@@ -25,7 +25,7 @@ session_start();
     <?php
       if (isset($_SESSION['erro_login'])) {
       echo '<p class="erro-login">' . $_SESSION['erro_login'] . '</p>';
-      unset($_SESSION['erro_login']); // apaga depois de mostrar
+      unset($_SESSION['erro_login']);
       }
     ?>
 
