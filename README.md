@@ -53,13 +53,11 @@ A ideia central do projeto é tornar o contato com a literatura mais acessível,
 
 ## 👨‍💻 Autores
 
-
-Anna Luiza Rosa Marques de Almeida
-Cayo Alves Freitas Ananias
-Daniel Sena Santiago
-Jeizielly dos Santos Santiago
-Rodrigo Almeida Vilas Bôas
-
+Anna Luiza Rosa Marques de Almeida <br/>
+Cayo Alves Freitas Ananias <br/>
+Daniel Sena Santiago <br/>
+Jeizielly dos Santos Santiago <br/>
+Rodrigo Almeida Vilas Bôas <br/>
 Trabalho de conclusão do curso técnico de **Desenvolvimento de Sistemas** na **ETEC JK**
 
 
