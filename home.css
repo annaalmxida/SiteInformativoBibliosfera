@@ -48,24 +48,6 @@ header {
     left: 0;
 }
 
-body{
-    background-color: var(--page-bg);
-    padding-top: 82px;
-    padding-bottom: 24px;
-    box-sizing: border-box;
-    font-family: var(--font-body);
-    font-weight: 400;
-    color: rgba(4,28,56,0.95);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    line-height: 1.6;
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-}
 
 /* Elementos do Header */
 .dvh {
@@ -407,7 +389,7 @@ p {
     font-style: normal;
 }
 .section {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .section h3 {
@@ -539,6 +521,113 @@ p {
     border: none;
 }
 
+.resenhatxt {
+    text-align: justify;
+}   
+
+footer {
+    position: static;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0f55b2;
+    color: #0f55b2;
+    text-align: center;
+    padding: 15px 0;
+    margin: 0; 
+    font-family: "Sour Gummy", "tec2", sans-serif;
+    box-shadow: 0 -2px 10px #0f55b2;
+    z-index: 999; 
+}
 
 
+.topo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.topo:focus-visible{
+    outline: 3px solid rgba(15,85,178,0.18);
+    outline-offset: 4px;
+    border-radius: 8px;
+}
 
+#home {
+    scroll-margin-top: 92px;
+}
+
+/* --- AJUSTE ESTRUTURAL DO CORPO --- */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--page-bg);
+    padding-top: 72px; /* Altura exata do seu header */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o corpo ocupe a tela toda */
+    box-sizing: border-box;
+}
+
+/* O conteúdo principal deve crescer para empurrar o footer */
+main.home {
+    flex: 1; 
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 50px;
+    box-sizing: border-box;
+}
+
+/* --- FOOTER (ESTILO DA IMAGEM 2) --- */
+footer {
+    width: 100%;
+    background-color: #0f55b2 !important; /* Força o azul */
+    color: #ffffff !important;
+    padding: 25px 0;
+    box-shadow: 0 -4px 15px rgba(7, 67, 144, 0.3);
+    margin-top: auto; /* Cola no fundo se a página for curta */
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o texto © 2026 */
+    position: relative; /* Base para o botão na direita */
+    box-sizing: border-box;
+}
+
+.footer-inner span {
+    font-family: var(--fonte-titulo);
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* O botão "Voltar ao topo" */
+.voltar-topo {
+    position: absolute;
+    right: 50px; /* Alinhado à direita conforme imagem 2 */
+    background: transparent;
+    color: #ffffff;
+    font-family: var(--fonte-titulo);
+    border: 2px solid #ffffff;
+    padding: 8px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.voltar-topo:hover {
+    background: #ffffff;
+    color: #0f55b2;
+    transform: translateY(-2px);
+}
