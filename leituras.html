@@ -15,7 +15,7 @@
 	<link rel="shortcut icon" href="img/logo.png">
 	<script src="script.js"></script>
 </head>
-<body>
+<body id="topo">
 
 	<header>
 		<div class="dvh">
@@ -56,146 +56,56 @@
 		<!-- HERO LEITURAS -->
 		<section class="hero">
 			<div class="hero-text">
-				<h2>Leituras que transformam</h2>
+				<h2>Meu Progresso de Leitura</h2>
 				<p>
-					Guias, artigos e conteúdos que aprofundam sua compreensão da literatura
-					e expandem seus horizontes através de análises e reflexões.
+					Acompanhe seus livros em andamento, registre seu progresso
+					e compartilhe atualizações com a comunidade.
 				</p>
 
 				<div class="hero-actions">
-					<a href="#leituras-grid" class="btn-primary" role="button" aria-label="Ver Leituras" data-scroll>Ver Leituras</a>
-					<a href="home.html" class="btn-secondary" role="button" aria-label="Voltar ao Início" data-scroll>Voltar ao Início</a>
+					<button id="add-book-btn" class="btn-primary" role="button" aria-label="Adicionar Novo Livro">Adicionar Livro</button>
+					<a href="comunidade.html" class="btn-secondary" role="button" aria-label="Ver Comunidade">Ver Comunidade</a>
 				</div>
 			</div>
 
 			<div class="hero-image">
-				<img src="img/leitura.webp" alt="Ilustração de leitura">
+				<img src="img/ler.webp" alt="Ilustração de leitura">
 			</div>
 		</section>
 
-		<!-- LEITURAS DESTAQUES -->
-		<section class="section" id="leituras-grid">
-			<h3>Conteúdos de Leitura</h3>
+		<!-- FORMULÁRIO PARA ADICIONAR LIVRO (OCULTO POR PADRÃO) -->
+		<section id="add-book-form" class="section" style="display: none;">
+			<h3>Adicionar Novo Livro</h3>
+			<form id="book-form">
+				<label for="book-title">Título do Livro:</label>
+				<input type="text" id="book-title" required>
 
-			<div class="cards">
-				<!-- Card 1 -->
-				<article class="card">
-					<span class="tag leitura">Leitura</span>
-					<h4>10 Livros Essenciais para Iniciantes</h4>
-					<p class="resenhatxt">Um guia prático com recomendações de livros acessíveis e envolventes para quem está começando sua jornada literária.</p>
-					<p><strong>📚 5 min de leitura</strong></p>
-					<a href="#" class="btn-secondary">Ler artigo</a>
-				</article>
+				<label for="book-author">Autor:</label>
+				<input type="text" id="book-author" required>
 
-				<!-- Card 2 -->
-				<article class="card">
-					<span class="tag leitura">Leitura</span>
-					<h4>Como Criar o Hábito de Ler Diariamente</h4>
-					<p class="resenhatxt">Dicas práticas e estratégias comprovadas para incorporar a leitura na sua rotina e manter a consistência ao longo do tempo.</p>
-					<p><strong>📚 6 min de leitura</strong></p>
-					<a href="#" class="btn-secondary">Ler artigo</a>
-				</article>
+				<label for="total-pages">Total de Páginas:</label>
+				<input type="number" id="total-pages" required>
 
-				<!-- Card 3 -->
-				<article class="card">
-					<span class="tag leitura">Leitura</span>
-					<h4>Gêneros Literários: Explorando Diferentes Mundos</h4>
-					<p class="resenhatxt">Conheça os principais gêneros da literatura, suas características únicas e encontre qual deles mais combina com você.</p>
-					<p><strong>📚 8 min de leitura</strong></p>
-					<a href="#" class="btn-secondary">Ler artigo</a>
-				</article>
+				<button type="submit" class="btn-primary">Adicionar Livro</button>
+			</form>
+		</section>
 
-				<!-- Card 4 -->
-				<article class="card">
-					<span class="tag leitura">Leitura</span>
-					<h4>Técnicas de Leitura Rápida e Compreensão</h4>
-					<p class="resenhatxt">Aprenda técnicas eficientes para ler mais rápido sem comprometer a compreensão e absorção do conteúdo literário.</p>
-					<p><strong>📚 7 min de leitura</strong></p>
-					<a href="#" class="btn-secondary">Ler artigo</a>
-				</article>
-
-				<!-- Card 5 -->
-				<article class="card">
-					<span class="tag leitura">Leitura</span>
-					<h4>Mulheres Autoras que Mudaram a Literatura</h4>
-					<p class="resenhatxt">Descubra as histórias de autoras icônicas que desafiaram convenções e deixaram legados indeléveis na literatura mundial.</p>
-					<p><strong>📚 9 min de leitura</strong></p>
-					<a href="#" class="btn-secondary">Ler artigo</a>
-				</article>
-
-				<!-- Card 6 -->
-				<article class="card">
-					<span class="tag leitura">Leitura</span>
-					<h4>Literatura Brasileira: Autores Que Você Deve Conhecer</h4>
-					<p class="resenhatxt">Um mergulho na riqueza da literatura brasileira, explorando os autores mais influentes e suas obras imortais.</p>
-					<p><strong>📚 10 min de leitura</strong></p>
-					<a href="#" class="btn-secondary">Ler artigo</a>
-				</article>
-
-				<!-- Card 7 -->
-				<article class="card">
-					<span class="tag leitura">Leitura</span>
-					<h4>O Poder da Ficção Científica: Imaginando o Futuro</h4>
-					<p class="resenhatxt">Explore como a ficção científica nos ajuda a questionar o presente e imaginar possibilidades infinitas para o futuro.</p>
-					<p><strong>📚 8 min de leitura</strong></p>
-					<a href="#" class="btn-secondary">Ler artigo</a>
-				</article>
-
-				<!-- Card 8 -->
-				<article class="card">
-					<span class="tag leitura">Leitura</span>
-					<h4>Análise Literária: Como Ler Com Profundidade</h4>
-					<p class="resenhatxt">Técnicas de análise literária para compreender temas, simbolismos e mensagens ocultas nas obras que você lê.</p>
-					<p><strong>📚 11 min de leitura</strong></p>
-					<a href="#" class="btn-secondary">Ler artigo</a>
-				</article>
-
-				<!-- Card 9 -->
-				<article class="card">
-					<span class="tag leitura">Leitura</span>
-					<h4>Poesia Contemporânea: Vozes Atuais da Literatura</h4>
-					<p class="resenhatxt">Conheça poetas contemporâneos que estão redefinindo a poesia com linguagem moderna e temas relevantes ao nosso tempo.</p>
-					<p><strong>📚 7 min de leitura</strong></p>
-					<a href="#" class="btn-secondary">Ler artigo</a>
-				</article>
-
-				<!-- Card 10 -->
-				<article class="card">
-					<span class="tag leitura">Leitura</span>
-					<h4>Livros Que Exploram Identidade e Pertencimento</h4>
-					<p class="resenhatxt">Recomendações de obras que abordam temas de identidade, pertencimento e aceitação de forma sensível e transformadora.</p>
-					<p><strong>📚 6 min de leitura</strong></p>
-					<a href="#" class="btn-secondary">Ler artigo</a>
-				</article>
-
-				<!-- Card 11 -->
-				<article class="card">
-					<span class="tag leitura">Leitura</span>
-					<h4>O Impacto do Realismo Mágico na Literatura</h4>
-					<p class="resenhatxt">Descubra como o realismo mágico revolucionou a narrativa literária e criou universos onde o impossível é plausível.</p>
-					<p><strong>📚 9 min de leitura</strong></p>
-					<a href="#" class="btn-secondary">Ler artigo</a>
-				</article>
-
-				<!-- Card 12 -->
-				<article class="card">
-					<span class="tag leitura">Leitura</span>
-					<h4>Adaptando Livros para o Audiolivro: A Nova Era</h4>
-					<p class="resenhatxt">Explore a tendência crescente dos audiolivros e como essa formato está transformando o acesso à literatura.</p>
-					<p><strong>📚 8 min de leitura</strong></p>
-					<a href="#" class="btn-secondary">Ler artigo</a>
-				</article>
+		<!-- LIVROS EM PROGRESSO -->
+		<section class="section" id="progress-section">
+			<h3>Meus Livros em Andamento</h3>
+			<div id="books-container" class="cards">
+				<!-- Livros serão inseridos aqui via JS -->
 			</div>
 		</section>
 
 		<!-- CTA FINAL -->
 		<section class="cta">
-			<h3>Mergulhe em Novas Histórias</h3>
+			<h3>Compartilhe Seu Progresso</h3>
 			<p>
-				Descubra análises, resenhas e vídeos que expandem sua forma
-				de enxergar a leitura e a literatura.
+				Suas atualizações aparecem no seu perfil e na comunidade,
+				inspirando outros leitores.
 			</p>
-			<a href="resenhas.html" class="btn-primary">Explorar resenhas</a>
+			<a href="perfil.php" class="btn-primary">Ver Meu Perfil</a>
 		</section>
 
 	</main>
@@ -214,6 +124,151 @@
 			
 		</div>
 	</footer>
+
+	<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const addBookBtn = document.getElementById('add-book-btn');
+    const addBookForm = document.getElementById('add-book-form');
+    const bookForm = document.getElementById('book-form');
+    const booksContainer = document.getElementById('books-container');
+
+    // Toggle form
+    addBookBtn.addEventListener('click', () => {
+        addBookForm.style.display = addBookForm.style.display === 'none' ? 'block' : 'none';
+    });
+
+    // Add book
+    bookForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const title = document.getElementById('book-title').value;
+        const author = document.getElementById('book-author').value;
+        const totalPages = parseInt(document.getElementById('total-pages').value);
+
+        const book = {
+            id: Date.now(),
+            title,
+            author,
+            totalPages,
+            currentPage: 0,
+            updates: []
+        };
+
+        saveBook(book);
+        renderBooks();
+        bookForm.reset();
+        addBookForm.style.display = 'none';
+    });
+
+    // Render books
+    function renderBooks() {
+        const books = getBooks();
+        booksContainer.innerHTML = '';
+        books.forEach(book => {
+            const progressPercent = (book.currentPage / book.totalPages) * 100;
+            const card = document.createElement('article');
+            card.className = 'progress-card';
+            card.innerHTML = `
+                <h4>${book.title}</h4>
+                <p>Por ${book.author}</p>
+                <p>Páginas: ${book.currentPage}/${book.totalPages}</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: ${progressPercent}%"></div>
+                </div>
+                <button class="update-btn" data-id="${book.id}">Atualizar Progresso</button>
+            `;
+            booksContainer.appendChild(card);
+        });
+
+        // Add event listeners to update buttons
+        document.querySelectorAll('.update-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const bookId = parseInt(e.target.dataset.id);
+                showUpdateModal(bookId);
+            });
+        });
+    }
+
+    // Show update modal
+    function showUpdateModal(bookId) {
+        const modal = document.createElement('div');
+        modal.className = 'modal';
+        modal.innerHTML = `
+            <div class="modal-content">
+                <h3>Atualizar Progresso</h3>
+                <label for="current-page">Páginas Lidas:</label>
+                <input type="number" id="current-page" min="0">
+                <label for="comment">Comentário (opcional):</label>
+                <textarea id="comment" rows="3"></textarea>
+                <div class="modal-actions">
+                    <button id="cancel-btn">Cancelar</button>
+                    <button id="save-btn" class="btn-primary">Salvar</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+        modal.style.display = 'flex';
+
+        const book = getBooks().find(b => b.id === bookId);
+        document.getElementById('current-page').value = book.currentPage;
+
+        document.getElementById('cancel-btn').addEventListener('click', () => {
+            modal.remove();
+        });
+
+        document.getElementById('save-btn').addEventListener('click', () => {
+            const currentPage = parseInt(document.getElementById('current-page').value);
+            const comment = document.getElementById('comment').value;
+
+            updateBookProgress(bookId, currentPage, comment);
+            modal.remove();
+            renderBooks();
+        });
+    }
+
+    // LocalStorage functions
+    function getBooks() {
+        return JSON.parse(localStorage.getItem('readingBooks') || '[]');
+    }
+
+    function saveBook(book) {
+        const books = getBooks();
+        books.push(book);
+        localStorage.setItem('readingBooks', JSON.stringify(books));
+    }
+
+    function updateBookProgress(bookId, currentPage, comment) {
+        const books = getBooks();
+        const bookIndex = books.findIndex(b => b.id === bookId);
+        if (bookIndex !== -1) {
+            books[bookIndex].currentPage = currentPage;
+            if (comment) {
+                const update = {
+                    date: new Date().toISOString(),
+                    pages: currentPage,
+                    comment
+                };
+                books[bookIndex].updates.push(update);
+                // Save to global updates for community
+                saveGlobalUpdate(update, books[bookIndex]);
+            }
+            localStorage.setItem('readingBooks', JSON.stringify(books));
+        }
+    }
+
+    function saveGlobalUpdate(update, book) {
+        const globalUpdates = JSON.parse(localStorage.getItem('globalUpdates') || '[]');
+        globalUpdates.unshift({
+            ...update,
+            bookTitle: book.title,
+            bookAuthor: book.author
+        });
+        localStorage.setItem('globalUpdates', JSON.stringify(globalUpdates));
+    }
+
+    // Initial render
+    renderBooks();
+});
+</script>
 
 </body>
 </html>

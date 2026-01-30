@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Leituras - Bibliosfera</title>
+
+	<!-- Fontes (devem carregar antes do CSS) -->
+	<link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+	<!-- CSS principal -->
+	<link rel="stylesheet" href="home.css">
+	<link rel="shortcut icon" href="img/logo.png">
+	<script src="script.js"></script>
+</head>
+<body id="topo">
+
+	<header>
+		<div class="dvh">
+			<a href="home.html" class="topo" title="Ir para o início" aria-label="Ir para o início da página">
+				<img src="img/logo.png" alt="Logo da Bibliosfera" class="logo" />
+				<h1 class="tituloh">Bibliosfera</h1>
+			</a>
+		</div>
+
+		<nav class="nav">
+			<ul class="navlinks">
+				<li><a href="resenhas.html">Resenhas</a></li>
+				<li><a href="videos.html">Vídeos</a></li>
+				<li><a href="leituras.html">Leituras</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="comunidade.html">Comunidade</a></li>
+				<li><a href="perfil.php">Meu Perfil</a></li>
+				<li><a href="contato.html">Contato</a></li>
+				<li class="nav-login">
+					<a href="logout.php"
+						class="btn-entrar"
+						id="btnEntrar"
+						type="button"
+						title="Entrar"
+						aria-haspopup="dialog"
+						aria-controls="loginModal"
+						aria-label="Entrar">
+						<img src="https://img.icons8.com/ios-filled/50/ff9800/login-rounded-right.png" alt="Entrar">
+						<span class="btn-text">Sair</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="home">
+
+		<!-- HERO LEITURAS -->
+		<section class="hero">
+			<div class="hero-text">
+				<h2>Leituras que transformam</h2>
+				<p>
+					Guias, artigos e conteúdos que aprofundam sua compreensão da literatura
+					e expandem seus horizontes através de análises e reflexões.
+				</p>
+
+				<div class="hero-actions">
+					<a href="#leituras-grid" class="btn-primary" role="button" aria-label="Ver Leituras" data-scroll>Ver Leituras</a>
+					<a href="home.html" class="btn-secondary" role="button" aria-label="Voltar ao Início" data-scroll>Voltar ao Início</a>
+				</div>
+			</div>
+
+			<div class="hero-image">
+				<img src="img/leitura.webp" alt="Ilustração de leitura">
+			</div>
+		</section>
+
+		<!-- LEITURAS DESTAQUES -->
+		<section class="section" id="leituras-grid">
+			<h3>Conteúdos de Leitura</h3>
+
+			<div class="cards">
+				<!-- Card 1 -->
+				<article class="card">
+					<span class="tag leitura">Leitura</span>
+					<h4>10 Livros Essenciais para Iniciantes</h4>
+					<p class="resenhatxt">Um guia prático com recomendações de livros acessíveis e envolventes para quem está começando sua jornada literária.</p>
+					<p><strong>📚 5 min de leitura</strong></p>
+					<a href="#" class="btn-secondary">Ler artigo</a>
+				</article>
+
+				<!-- Card 2 -->
+				<article class="card">
+					<span class="tag leitura">Leitura</span>
+					<h4>Como Criar o Hábito de Ler Diariamente</h4>
+					<p class="resenhatxt">Dicas práticas e estratégias comprovadas para incorporar a leitura na sua rotina e manter a consistência ao longo do tempo.</p>
+					<p><strong>📚 6 min de leitura</strong></p>
+					<a href="#" class="btn-secondary">Ler artigo</a>
+				</article>
+
+				<!-- Card 3 -->
+				<article class="card">
+					<span class="tag leitura">Leitura</span>
+					<h4>Gêneros Literários: Explorando Diferentes Mundos</h4>
+					<p class="resenhatxt">Conheça os principais gêneros da literatura, suas características únicas e encontre qual deles mais combina com você.</p>
+					<p><strong>📚 8 min de leitura</strong></p>
+					<a href="#" class="btn-secondary">Ler artigo</a>
+				</article>
+
+				<!-- Card 4 -->
+				<article class="card">
+					<span class="tag leitura">Leitura</span>
+					<h4>Técnicas de Leitura Rápida e Compreensão</h4>
+					<p class="resenhatxt">Aprenda técnicas eficientes para ler mais rápido sem comprometer a compreensão e absorção do conteúdo literário.</p>
+					<p><strong>📚 7 min de leitura</strong></p>
+					<a href="#" class="btn-secondary">Ler artigo</a>
+				</article>
+
+				<!-- Card 5 -->
+				<article class="card">
+					<span class="tag leitura">Leitura</span>
+					<h4>Mulheres Autoras que Mudaram a Literatura</h4>
+					<p class="resenhatxt">Descubra as histórias de autoras icônicas que desafiaram convenções e deixaram legados indeléveis na literatura mundial.</p>
+					<p><strong>📚 9 min de leitura</strong></p>
+					<a href="#" class="btn-secondary">Ler artigo</a>
+				</article>
+
+				<!-- Card 6 -->
+				<article class="card">
+					<span class="tag leitura">Leitura</span>
+					<h4>Literatura Brasileira: Autores Que Você Deve Conhecer</h4>
+					<p class="resenhatxt">Um mergulho na riqueza da literatura brasileira, explorando os autores mais influentes e suas obras imortais.</p>
+					<p><strong>📚 10 min de leitura</strong></p>
+					<a href="#" class="btn-secondary">Ler artigo</a>
+				</article>
+
+				<!-- Card 7 -->
+				<article class="card">
+					<span class="tag leitura">Leitura</span>
+					<h4>O Poder da Ficção Científica: Imaginando o Futuro</h4>
+					<p class="resenhatxt">Explore como a ficção científica nos ajuda a questionar o presente e imaginar possibilidades infinitas para o futuro.</p>
+					<p><strong>📚 8 min de leitura</strong></p>
+					<a href="#" class="btn-secondary">Ler artigo</a>
+				</article>
+
+				<!-- Card 8 -->
+				<article class="card">
+					<span class="tag leitura">Leitura</span>
+					<h4>Análise Literária: Como Ler Com Profundidade</h4>
+					<p class="resenhatxt">Técnicas de análise literária para compreender temas, simbolismos e mensagens ocultas nas obras que você lê.</p>
+					<p><strong>📚 11 min de leitura</strong></p>
+					<a href="#" class="btn-secondary">Ler artigo</a>
+				</article>
+
+				<!-- Card 9 -->
+				<article class="card">
+					<span class="tag leitura">Leitura</span>
+					<h4>Poesia Contemporânea: Vozes Atuais da Literatura</h4>
+					<p class="resenhatxt">Conheça poetas contemporâneos que estão redefinindo a poesia com linguagem moderna e temas relevantes ao nosso tempo.</p>
+					<p><strong>📚 7 min de leitura</strong></p>
+					<a href="#" class="btn-secondary">Ler artigo</a>
+				</article>
+
+				<!-- Card 10 -->
+				<article class="card">
+					<span class="tag leitura">Leitura</span>
+					<h4>Livros Que Exploram Identidade e Pertencimento</h4>
+					<p class="resenhatxt">Recomendações de obras que abordam temas de identidade, pertencimento e aceitação de forma sensível e transformadora.</p>
+					<p><strong>📚 6 min de leitura</strong></p>
+					<a href="#" class="btn-secondary">Ler artigo</a>
+				</article>
+
+				<!-- Card 11 -->
+				<article class="card">
+					<span class="tag leitura">Leitura</span>
+					<h4>O Impacto do Realismo Mágico na Literatura</h4>
+					<p class="resenhatxt">Descubra como o realismo mágico revolucionou a narrativa literária e criou universos onde o impossível é plausível.</p>
+					<p><strong>📚 9 min de leitura</strong></p>
+					<a href="#" class="btn-secondary">Ler artigo</a>
+				</article>
+
+				<!-- Card 12 -->
+				<article class="card">
+					<span class="tag leitura">Leitura</span>
+					<h4>Adaptando Livros para o Audiolivro: A Nova Era</h4>
+					<p class="resenhatxt">Explore a tendência crescente dos audiolivros e como essa formato está transformando o acesso à literatura.</p>
+					<p><strong>📚 8 min de leitura</strong></p>
+					<a href="#" class="btn-secondary">Ler artigo</a>
+				</article>
+			</div>
+		</section>
+
+		<!-- CTA FINAL -->
+		<section class="cta">
+			<h3>Mergulhe em Novas Histórias</h3>
+			<p>
+				Descubra análises, resenhas e vídeos que expandem sua forma
+				de enxergar a leitura e a literatura.
+			</p>
+			<a href="resenhas.html" class="btn-primary">Explorar resenhas</a>
+		</section>
+
+	</main>
+
+	<!-- Footer padronizado -->
+	<footer style="width: 100%; background-color: #0f55b2; padding: 25px 0; margin-top: auto; display: block; box-shadow: 0 -2px 10px #0f55b2;">
+		<div style="max-width: 1200px; margin: 0 auto; padding: 0 50px; display: flex; justify-content: center; align-items: center; position: relative; box-sizing: border-box;">
+			
+			<span style="color: #ffffff; font-family: 'Sour Gummy', cursive; font-size: 18px; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+				© 2026 - Todos os direitos reservados
+			</span>
+
+			<a href="#topo" style="position: absolute; right: 50px; border: 2px solid #ffffff; color: #ffffff; text-decoration: none; padding: 8px 18px; border-radius: 12px; font-family: 'Sour Gummy', cursive; font-weight: 600; font-size: 16px; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+				Voltar ao topo
+			</a>
+			
+		</div>
+	</footer>
+
+</body>
+</html>
